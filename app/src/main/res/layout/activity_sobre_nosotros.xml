@@ -35,59 +35,64 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="30dp">
-
-        <TextView
-            android:id="@+id/textView7"
+        android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:text="@string/sobre_nosotrosTitle"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="30dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="@string/sn1"
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="@string/sobre_nosotrosTitle"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="@string/sn2"
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/sn1"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="16sp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:backgroundTint="#494959"
-            android:drawableLeft="@drawable/ubicacion"
-            android:onClick="IrGoogleMaps"
-            android:text="@string/btnUbicacion"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/sn2"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="16sp" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/img"
-            app:srcCompat="@drawable/sobrenosotros" />
-    </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="#494959"
+                android:drawableLeft="@drawable/ubicacion"
+                android:onClick="IrGoogleMaps"
+                android:text="@string/btnUbicacion"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="217dp"
+                android:contentDescription="@string/img"
+                app:srcCompat="@drawable/sobrenosotros" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

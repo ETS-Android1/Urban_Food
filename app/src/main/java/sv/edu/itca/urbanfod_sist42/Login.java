@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
 
     public void Ingresar(View view) {
         if (etUsuario.getText().toString().isEmpty() || etClave.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Por favor, rellene todos los campos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.ToastRelleneTodos, Toast.LENGTH_SHORT).show();
         }
         else {
             String IP = "192.168.0.6";
@@ -61,7 +61,7 @@ public class Login extends AppCompatActivity {
 
                             if (objetoJSON.names().get(0).equals("exito")) {
                                 guardarSesion();
-                                result = "Bienvenido "+objetoJSON.getString("usuario");
+                                result = getString(R.string.Bienvenido)+objetoJSON.getString("usuario");
                             } else {
                                 result = objetoJSON.getString("error");
                             }
@@ -84,7 +84,7 @@ public class Login extends AppCompatActivity {
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.ToastErrorServidor, Toast.LENGTH_SHORT).show();
                 }
             });
         }

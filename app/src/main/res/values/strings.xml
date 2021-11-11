@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UrbanFod-SIST42</string>
+    <string name="app_name">UrbanFood</string>
     <string name="titleReservas">Urban Food</string>
     <string name="reservar">RESERVAR</string>
     <string name="tamano_del_grupo">Tamaño del grupo.</string>
@@ -58,4 +58,18 @@
     <string name="entradasimg">entradas</string>
     <string name="postresimg">postres</string>
     <string name="principal">principal</string>
+    <string name="Toast_busqueda">Por favor, rellene el campo de búsqueda</string>
+    <string name="noHayCoincidencias">No hay coincidencias</string>
+    <string name="ToastErrorServidor">Error en el servidor</string>
+    <string name="ToastRelleneTodos">Por favor, rellene todos los campos</string>
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="tab1">Inicio</string>
+    <string name="tab2">Reservas</string>
+    <string name="tab3">Historial</string>
+    <string name="ToastPrimeroSesion">Primero inicia sesión</string>
+    <string name="ToastReservaOK">Reserva realizada correctamente</string>
+    <string name="ToastErrorJson">Error en el JSON: </string>
+    <string name="ToastSesionFin">Sesión finalizada</string>
+    <string name="registradoOk">Registrado correctamente</string>
+    <string name="UsuarioYaExiste">El nombre de usuario ya existe</string>
 </resources>

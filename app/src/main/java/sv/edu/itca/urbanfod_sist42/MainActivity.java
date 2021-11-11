@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
         if(sesion)
         {
             Button boton = (Button) findViewById(R.id.btnSesion);
-            boton.setText("CERRAR SESIÓN");
+            boton.setText(R.string.btnCerrarSesion);
         }
         else
         {
             Button boton = (Button) findViewById(R.id.btnSesion);
-            boton.setText("INICIAR SESIÓN");
+            boton.setText(R.string.LoginTitle);
         }
 
         etGrupo = findViewById(R.id.etGrupo);
@@ -90,17 +90,17 @@ public class MainActivity extends AppCompatActivity {
 
         spec1=tabControl.newTabSpec("INI");
         spec1.setContent(R.id.inicio);
-        spec1.setIndicator("Inicio");
+        spec1.setIndicator(getString(R.string.tab1));
         tabControl.addTab(spec1);
 
         spec2=tabControl.newTabSpec("RES");
         spec2.setContent(R.id.reservas);
-        spec2.setIndicator("Reservas");
+        spec2.setIndicator(getString(R.string.tab2));
         tabControl.addTab(spec2);
 
         spec3=tabControl.newTabSpec("HIST");
         spec3.setContent(R.id.historial);
-        spec3.setIndicator("Historial");
+        spec3.setIndicator(getString(R.string.tab3));
         tabControl.addTab(spec3);
 
         ConsultaUsuario();
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Hecho(View view) {
         if (etGrupo.getText().toString().isEmpty() || etHora.getText().toString().isEmpty() || etFecha.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Por favor, rellene todos los campos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.ToastRelleneTodos, Toast.LENGTH_SHORT).show();
         }
         else {
             SharedPreferences preferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent objVentana = new Intent(MainActivity.this,Login.class);
                 startActivity(objVentana);
-                Toast.makeText(getApplicationContext(), "Primero inicia sesión", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.ToastPrimeroSesion, Toast.LENGTH_SHORT).show();
 
             }
         }
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getApplicationContext(), "Reserva realizada correctamente", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), R.string.ToastReservaOK, Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener() {
@@ -261,20 +261,20 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(), "Error en el JSON: " + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), getString(R.string.ToastErrorJson) + e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.ToastErrorServidor, Toast.LENGTH_SHORT).show();
                 }
             });
         }
         else
         {
-            txtError.setText("Primero inicia sesión");
+            txtError.setText(R.string.ToastPrimeroSesion);
         }
     }
 
@@ -330,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(), "Error en el JSON: " + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.ToastErrorJson+ e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -343,7 +343,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            txtError.setText("Primero inicia sesión");
+            txtError.setText(R.string.ToastPrimeroSesion);
         }
     }
 
@@ -355,7 +355,7 @@ public class MainActivity extends AppCompatActivity {
             preferences.edit().clear().commit();
             Intent objVentana = new Intent(MainActivity.this,MainActivity.class);
             startActivity(objVentana);
-            Toast.makeText(getApplicationContext(), "Sesión finalizada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.ToastSesionFin, Toast.LENGTH_SHORT).show();
         }
         else
         {

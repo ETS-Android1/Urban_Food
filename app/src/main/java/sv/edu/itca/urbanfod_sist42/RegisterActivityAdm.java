@@ -80,7 +80,7 @@ public class RegisterActivityAdm extends AppCompatActivity {
 
                             if (objetoJSON.names().get(0).equals("Success"))
                             {
-                                Toast.makeText(getApplicationContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.registradoOk, Toast.LENGTH_SHORT).show();
                                 etNombresAdm.setText("");
                                 etApellidosAdm.setText("");
                                 etTelefonoAdm.setText("");
@@ -89,17 +89,17 @@ public class RegisterActivityAdm extends AppCompatActivity {
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(), "El nombre de usuario ya existe", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.UsuarioYaExiste, Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(), "Error en el JSON: " + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.ToastErrorJson + e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.ToastErrorServidor, Toast.LENGTH_SHORT).show();
                 }
             });
         }

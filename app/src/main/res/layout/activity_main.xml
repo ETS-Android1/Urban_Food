@@ -53,6 +53,166 @@
                 android:layout_weight="1">
 
                 <LinearLayout
+                    android:id="@+id/reservas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="SpeakableTextPresentCheck">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginVertical="20dp"
+                                android:text="@string/reservar"
+                                android:textColor="@color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:text="@string/tamano_del_grupo"
+                                android:textColor="@color/black">
+
+                            </TextView>
+
+                            <EditText
+                                android:id="@+id/etGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="60dp"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:padding="15dp"
+                                android:textColor="#000000"
+                                tools:ignore="SpeakableTextPresentCheck">
+
+                            </EditText>
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="@string/seleccione_la_fecha"
+                                android:textColor="#000000" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="10dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#494959"
+                                    android:onClick="SelectFecha"
+                                    android:src="@drawable/imgcalendar"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                                <EditText
+                                    android:id="@+id/etFecha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ems="10"
+                                    android:importantForAutofill="no"
+                                    android:inputType="textPersonName"
+                                    android:minHeight="48dp"
+                                    android:textColor="#000000"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="@string/seleccione_la_hora"
+                                android:textColor="#000000" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#494959"
+                                    android:onClick="SelectHora"
+                                    android:src="@drawable/btntime"
+                                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                                <EditText
+                                    android:id="@+id/etHora"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ems="10"
+                                    android:importantForAutofill="no"
+                                    android:inputType="textPersonName"
+                                    android:minHeight="48dp"
+                                    android:textColor="#000000"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </LinearLayout>
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="10dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:drawableLeft="@drawable/phone"
+                                android:onClick="Llamar"
+                                android:text="@string/llamar"
+                                android:textAlignment="center"
+                                android:textColor="#000000" />
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="10dp"
+                                android:backgroundTint="#494959"
+                                android:minHeight="48dp"
+                                android:onClick="Hecho"
+                                android:text="@string/hecho"
+                                android:textColor="#FFFFFF"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/inicio"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -178,157 +338,6 @@
                                 android:textColor="#FFFFFF" />
                         </LinearLayout>
                     </ScrollView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/reservas"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginVertical="20dp"
-                        android:text="@string/reservar"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:padding="15dp"
-                        android:text="@string/tamano_del_grupo"
-                        android:textColor="@color/black">
-
-                    </TextView>
-
-                    <EditText
-                        android:id="@+id/etGrupo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="60dp"
-                        android:importantForAutofill="no"
-                        android:inputType="number"
-                        android:padding="15dp"
-                        android:textColor="#000000"
-                        tools:ignore="SpeakableTextPresentCheck">
-
-                    </EditText>
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:text="@string/seleccione_la_fecha"
-                        android:textColor="#000000" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginVertical="10dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:layout_width="5dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:backgroundTint="#494959"
-                            android:drawableLeft="@drawable/imgcalendar"
-                            android:onClick="SelectFecha"
-                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-                        <EditText
-                            android:id="@+id/etFecha"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:importantForAutofill="no"
-                            android:inputType="textPersonName"
-                            android:minHeight="48dp"
-                            android:textColor="#000000"
-                            tools:ignore="SpeakableTextPresentCheck" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:text="@string/seleccione_la_hora"
-                        android:textColor="#000000" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginVertical="10dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:backgroundTint="#494959"
-                            android:drawableLeft="@drawable/btntime"
-                            android:onClick="SelectHora"
-                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-                        <EditText
-                            android:id="@+id/etHora"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:importantForAutofill="no"
-                            android:inputType="textPersonName"
-                            android:minHeight="48dp"
-                            android:textColor="#000000"
-                            tools:ignore="SpeakableTextPresentCheck" />
-
-                    </LinearLayout>
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginVertical="10dp"
-                        android:backgroundTint="#FFFFFF"
-                        android:drawableLeft="@drawable/phone"
-                        android:onClick="Llamar"
-                        android:text="@string/llamar"
-                        android:textAlignment="center"
-                        android:textColor="#000000" />
-
-                    <Button
-                        android:id="@+id/button2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="50dp"
-                        android:layout_marginVertical="10dp"
-                        android:backgroundTint="#494959"
-                        android:minHeight="48dp"
-                        android:onClick="Hecho"
-                        android:text="@string/hecho"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="TouchTargetSizeCheck" />
-
 
                 </LinearLayout>
 

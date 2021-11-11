@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void Registrarme(View view) {
         if (etNombres.getText().toString().isEmpty() || etApellidos.getText().toString().isEmpty() || etTelefono.getText().toString().isEmpty() || etUsuarioAdd.getText().toString().isEmpty() || etClaveAdd.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Por favor, rellene todos los campos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.ToastRelleneTodos, Toast.LENGTH_SHORT).show();
         }
         else {
             String nombres = etNombres.getText().toString();
@@ -80,24 +80,24 @@ public class RegisterActivity extends AppCompatActivity {
 
                             if (objetoJSON.names().get(0).equals("Success"))
                             {
-                                Toast.makeText(getApplicationContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.registradoOk, Toast.LENGTH_SHORT).show();
                                 Intent ventana = new Intent(RegisterActivity.this, MainActivity.class);
                                 startActivity(ventana);
                                 finish();
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(), "El nombre de usuario ya existe", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.UsuarioYaExiste, Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(), "Error en el JSON: " + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.ToastErrorJson + e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.ToastErrorServidor, Toast.LENGTH_SHORT).show();
                 }
             });
         }

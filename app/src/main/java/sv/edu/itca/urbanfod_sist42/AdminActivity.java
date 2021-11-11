@@ -66,7 +66,7 @@ public class AdminActivity extends AppCompatActivity {
 
         if (etUsuarioBuscar.getText().toString().isEmpty())
         {
-            Toast.makeText(getApplicationContext(), "Por favor, rellene campo de búsqueda", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.Toast_busqueda, Toast.LENGTH_SHORT).show();
         }
         else {
             String IP = "192.168.0.6";
@@ -118,11 +118,11 @@ public class AdminActivity extends AppCompatActivity {
                                     txtReserva3Adm.setText(objetoJSON.getString("date2"));
                                 }
                             } else if (objetoJSON.names().get(0).equals("error")) {
-                                Toast.makeText(getApplicationContext(), "No hay coincidencias", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.noHayCoincidencias, Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(), "No hay coincidencias", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.noHayCoincidencias, Toast.LENGTH_SHORT).show();
                             txtid1Adm.setText("");
                             txtid2Adm.setText("");
                             txtid3Adm.setText("");
@@ -140,7 +140,7 @@ public class AdminActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.ToastErrorServidor, Toast.LENGTH_SHORT).show();
                 }
             });
         }
