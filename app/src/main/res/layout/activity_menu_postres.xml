@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".SobreNosotros">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0A6FB3"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icon"
+            tools:ignore="ImageContrastCheck">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/titleReservas"
+            android:textColor="@color/white"
+            android:textSize="30sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginVertical="30dp"
+        android:text="@string/titulopostres"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/postresimg"
+                app:srcCompat="@drawable/postrespastel" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/postresimg"
+                app:srcCompat="@drawable/postrestresleches" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/postresimg"
+                app:srcCompat="@drawable/postresflan"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/postresimg"
+                app:srcCompat="@drawable/postrestiramisu" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/postresimg"
+                app:srcCompat="@drawable/postressorbete" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

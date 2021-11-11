@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/miTabHost"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/contenedorSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/contenedorprincipal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0A6FB3"
+                android:minHeight="?attr/actionBarSize">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="15dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/icon"
+                    tools:ignore="ImageContrastCheck"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/titleReservas"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"></TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/inicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="426dp"
+                        android:layout_height="90dp"
+                        android:contentDescription="@string/bannerDesc"
+                        android:src="@drawable/banner">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="#494959"
+                            android:onClick="SobreNosotros"
+                            android:text="@string/sobre_nosotros"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            style="?android:attr/buttonBarButtonStyle">
+
+                        </Button>
+
+                        <Button
+                            android:id="@+id/btnSesion"
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:backgroundTint="#494959"
+                            android:onClick="Sesion"
+                            android:text="@string/btnIniciarSesion"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            style="?android:attr/buttonBarButtonStyle">
+
+                        </Button>
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="25dp"
+                                android:text="@string/men"
+                                android:textColor="#000000"
+                                android:textSize="24sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:backgroundTint="#494959"
+                                android:drawableLeft="@drawable/principal"
+                                android:drawableRight="@drawable/arrow"
+                                android:onClick="MenuPrincipales"
+                                android:text="@string/platos_principales"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:backgroundTint="#494959"
+                                android:drawableLeft="@drawable/drink"
+                                android:drawableRight="@drawable/arrow"
+                                android:onClick="MenuBebidas"
+                                android:text="@string/bebidas"
+                                android:textAlignment="center"
+                                android:textColor="#FDFDFD" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:backgroundTint="#494959"
+                                android:drawableLeft="@drawable/icecream"
+                                android:drawableRight="@drawable/arrow"
+                                android:onClick="MenuPostres"
+                                android:text="@string/postresimg"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginVertical="10dp"
+                                android:backgroundTint="#494959"
+                                android:drawableLeft="@drawable/hambw"
+                                android:drawableRight="@drawable/arrow"
+                                android:onClick="MenuEntradas"
+                                android:text="@string/entradasimg"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reservas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="20dp"
+                        android:text="@string/reservar"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/tamano_del_grupo"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/etGrupo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="60dp"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:padding="15dp"
+                        android:textColor="#000000"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/seleccione_la_fecha"
+                        android:textColor="#000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#494959"
+                            android:drawableLeft="@drawable/imgcalendar"
+                            android:onClick="SelectFecha"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <EditText
+                            android:id="@+id/etFecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textColor="#000000"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/seleccione_la_hora"
+                        android:textColor="#000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#494959"
+                            android:drawableLeft="@drawable/btntime"
+                            android:onClick="SelectHora"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <EditText
+                            android:id="@+id/etHora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:textColor="#000000"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginVertical="10dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:drawableLeft="@drawable/phone"
+                        android:onClick="Llamar"
+                        android:text="@string/llamar"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginVertical="10dp"
+                        android:backgroundTint="#494959"
+                        android:minHeight="48dp"
+                        android:onClick="Hecho"
+                        android:text="@string/hecho"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/historial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtError"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:textAlignment="center"
+                                android:textColor="#FF0000"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:contentDescription="@string/icon"
+                                    app:srcCompat="@drawable/usertab3" />
+
+                                <TextView
+                                    android:id="@+id/txtUsuario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFF"
+                                    android:gravity="center"
+                                    android:text="@string/tituloUsuario"
+                                    android:textColor="#000000"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TableLayout
+                                android:id="@+id/tablaUsuario"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:padding="20dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:stretchColumns="1">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:background="#494959"
+                                        android:padding="5dp"
+                                        android:text="@string/id"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtID"
+                                        android:background="#F4F4F4"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="15dp"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:background="#494959"
+                                        android:padding="5dp"
+                                        android:text="@string/nombresHint"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtNombre"
+                                        android:background="#F4F4F4"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="15dp"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:background="#494959"
+                                        android:padding="5dp"
+                                        android:text="@string/telefonoHint"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtTelefono"
+                                        android:background="#F4F4F4"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="15dp"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:contentDescription="@string/icon"
+                                    app:srcCompat="@drawable/titlehistorial" />
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFF"
+                                    android:gravity="center"
+                                    android:text="@string/historial"
+                                    android:textColor="#000000"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ultimas_reservas"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textSize="20sp">
+
+                            </TextView>
+
+                            <TableLayout
+                                android:id="@+id/tablaReservas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:padding="20dp"
+                                android:stretchColumns="1">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:id="@+id/txtid1"
+                                        android:layout_height="wrap_content"
+                                        android:background="#494959"
+                                        android:padding="5dp"
+                                        android:text="@string/id"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtReserva1"
+                                        android:background="#F4F4F4"
+                                        android:text=""
+                                        android:textAlignment="center"
+                                        android:textColor="#000000"
+                                        android:textSize="20sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:id="@+id/txtid2"
+                                        android:layout_height="wrap_content"
+                                        android:background="#494959"
+                                        android:padding="5dp"
+                                        android:text="@string/id"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtReserva2"
+                                        android:background="#F4F4F4"
+                                        android:text=""
+                                        android:textAlignment="center"
+                                        android:textColor="#000000"
+                                        android:textSize="20sp" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="#FFFFFF">
+
+                                    <TextView
+                                        android:id="@+id/txtid3"
+                                        android:layout_height="wrap_content"
+                                        android:background="#494959"
+                                        android:padding="5dp"
+                                        android:text="@string/id"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/txtReserva3"
+                                        android:background="#F4F4F4"
+                                        android:text=""
+                                        android:textAlignment="center"
+                                        android:textColor="#000000"
+                                        android:textSize="20sp" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-4dp"
+                android:layout_weight="0"
+                android:textAlignment="viewStart" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</TabHost>

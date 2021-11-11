@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0A6FB3"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icon"
+            tools:ignore="ImageContrastCheck"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/titleReservas"
+            android:textColor="@color/white"
+            android:textSize="30sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="70dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/icon"
+                app:srcCompat="@drawable/imglogin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="@string/tituloRegistrarse"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/nombresHint"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/apellidosHint"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/telefonoHint"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/etUsuarioAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/usuarioHint"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/etClaveAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/claveHint"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#959595"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#494959"
+                android:onClick="Registrarme"
+                android:text="@string/btnRegistrarme"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/ya_tienes_cuenta"
+                    android:textColor="#3F51B5" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#494959"
+                    android:onClick="Iniciar"
+                    android:text="@string/btnIniciarSesion"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

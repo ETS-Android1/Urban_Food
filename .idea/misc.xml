@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_admin.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_menu_bebidas.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_menu_entradas.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_menu_postres.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_menu_principal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_register_adm.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/activity_sobre_nosotros.xml" value="0.22" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/designsplashscreen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/Nueva carpeta/UrbanFood/app/src/main/res/layout/list_reservas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/UrbanFodSIST42/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/UrbanFodSIST42/app/src/main/res/layout/activity_menu_bebidas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/UrbanFodSIST42/app/src/main/res/layout/activity_menu_entradas.xml" value="0.33" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/UrbanFodSIST42/app/src/main/res/layout/activity_menu_postres.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/UrbanFodSIST42/app/src/main/res/layout/activity_menu_principal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/UrbanFodSIST42/app/src/main/res/layout/activity_sobre_nosotros.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/cliente/AndroidStudioProjects/UrbanFood/app/src/main/res/layout/activity_main.xml" value="0.14270833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

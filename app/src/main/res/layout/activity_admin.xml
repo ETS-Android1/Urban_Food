@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".AdminActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0A6FB3"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icon"
+            tools:ignore="ImageContrastCheck"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/titleReservas"
+            android:textColor="@color/white"
+            android:textSize="30sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="426dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/bannerDesc"
+                android:src="@drawable/banner">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="#494959"
+                    android:onClick="AgregarUsuario"
+                    android:text="@string/btnAgregar_usuario"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    style="?android:attr/buttonBarButtonStyle">
+
+                </Button>
+
+                <Button
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="#494959"
+                    android:onClick="CerrarSesion"
+                    android:text="@string/btnCerrarSesion"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    style="?android:attr/buttonBarButtonStyle">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etUsuarioBuscar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="@string/usuarioHint"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#A1A1A1"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
+                    android:importantForAutofill="no" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#494959"
+                    android:onClick="Buscar"
+                    android:text="@string/btnBuscar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    tools:ignore="TouchTargetSizeCheck">
+
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/iconuserDesc"
+                    android:src="@drawable/usertab3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/tituloUsuario"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TableLayout
+                android:id="@+id/tablaUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/txtid"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtIDAdm"
+                        android:background="#F4F4F4"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/nombresHint"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtNombreAdm"
+                        android:background="#F4F4F4"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/telefonoHint"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtTelefonoAdm"
+                        android:background="#F4F4F4"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/txtUsuarioTable"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtUsuarioAdm"
+                        android:background="#F4F4F4"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/txttipotable"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtTipoAdm"
+                        android:background="#F4F4F4"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/imgDesc"
+                    android:src="@drawable/titlehistorial" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/ltimas_reservasTitle"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tablaReservas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="20dp"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/txtid1Adm"
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/id"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtReserva1Adm"
+                        android:background="#F4F4F4"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/txtid2Adm"
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/id"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtReserva2Adm"
+                        android:background="#F4F4F4"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/txtid3Adm"
+                        android:layout_height="wrap_content"
+                        android:background="#494959"
+                        android:padding="5dp"
+                        android:text="@string/id"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtReserva3Adm"
+                        android:background="#F4F4F4"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".RegisterActivityAdm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0A6FB3"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icon"
+            tools:ignore="ImageContrastCheck"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/titleReservas"
+            android:textColor="@color/white"
+            android:textSize="30sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="70dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/icon"
+                app:srcCompat="@drawable/imglogin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="@string/tituloRegistrar"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNombresAdm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/nombresHint"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#AEAEAE"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etApellidosAdm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/apellidosHint"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#AEAEAE"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etTelefonoAdm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/telefonoHint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#AEAEAE"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etUsuarioAdm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/usuarioHint"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#AEAEAE"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etClaveAdm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/claveHint"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                android:textColorHint="#AEAEAE"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#494959"
+                android:onClick="Registrar"
+                android:text="@string/btnRegistrar"
+                android:textColor="#FFFFFF"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:backgroundTint="#494959"
+                android:onClick="Salir"
+                android:text="@string/btnSalir"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
